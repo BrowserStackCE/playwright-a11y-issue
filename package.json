@@ -1,0 +1,33 @@
+{
+  "name": "scif-playwright",
+  "version": "1.0.0",
+  "description": "Playwright + Cucumber JS test framework with Page Object and Factory patterns",
+  "scripts": {
+    "build": "tsc",
+    "test": "cucumber-js",
+    "test:chrome": "BROWSER=chrome cucumber-js",
+    "test:firefox": "BROWSER=firefox cucumber-js",
+    "test:edge": "BROWSER=edge cucumber-js",
+    "test:webkit": "BROWSER=webkit cucumber-js",
+    "test:browserstack": "USE_BROWSERSTACK_SDK=true BASE_URL=https://t2.statefunddirect.com browserstack-node-sdk cucumber-js",
+	"test:browserstackwindows": "browserstack-node-sdk cucumber-js",
+    "postinstall": "npx playwright install chromium firefox webkit || true"
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "typescript",
+    "page-object",
+    "browserstack"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.4",
+    "browserstack-node-sdk": "1.57.2",
+    "dotenv": "^16.4.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}

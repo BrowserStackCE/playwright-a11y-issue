@@ -1,0 +1,56 @@
+# =============================
+# BrowserStack Credentials
+# =============================
+# Prefer env vars: BROWSERSTACK_USERNAME / BROWSERSTACK_ACCESS_KEY
+userName: ${BROWSERSTACK_USERNAME}
+accessKey: ${BROWSERSTACK_ACCESS_KEY}
+
+# ======================
+# BrowserStack Reporting
+# ======================
+projectName: SCIF Playwright
+buildName: scif-playwright
+buildIdentifier: '#${BUILD_NUMBER}'
+
+# =======================================
+# Platforms (Browsers / Devices to test)
+# =======================================
+# https://www.browserstack.com/list-of-browsers-and-platforms/automate
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: chrome
+    browserVersion: "148.0"
+  # - os: OS X
+  #   osVersion: Sonoma
+  #   browserName: playwright-firefox
+  #   browserVersion: latest
+  # - os: OS X
+  #   osVersion: Sonoma
+  #   browserName: playwright-webkit
+  #   browserVersion: latest
+
+# =======================
+# Parallels per Platform
+# =======================
+parallelsPerPlatform: 1
+
+# ==========================================
+# BrowserStack Local (private/localhost apps)
+# ==========================================
+browserstackLocal: true
+
+# Framework must be playwright for Playwright + Cucumber
+framework: playwright
+
+# ===================
+# Debugging features
+# ===================
+debug: false
+networkLogs: true
+consoleLogs: errors
+video: true
+
+# Test Observability / Reporting & Analytics
+testObservability: true
+accessibility: true
