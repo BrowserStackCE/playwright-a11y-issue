@@ -39,6 +39,10 @@ parallelsPerPlatform: 1
 # BrowserStack Local (private/localhost apps)
 # ==========================================
 browserstackLocal: true
+# browsertstackLocalOptions:
+#   proxyHost: 192.168.0.102
+#   proxyPort: 8281
+
 
 # Framework must be playwright for Playwright + Cucumber
 framework: playwright
@@ -53,4 +57,4 @@ video: true
 
 # Test Observability / Reporting & Analytics
 testObservability: true
-accessibility: true
+#accessibility: true
